@@ -535,3 +535,34 @@ WHERE rc.IntervalType = 'Offline'
 GO
 
 
+/****** Object:  StoredProcedure [dbo].[AGG_sExportData]    Script Date: 02/04/2025 10:09:56 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:		ADL
+-- Create date: 22/12/23
+-- Description:	Export procedure
+-- =============================================
+ALTER PROCEDURE [dbo].[AGG_sExportData] 
+  @MES varchar(255) = ''
+ ,@ERP varchar(255) = ''
+, @PlanetTogether_Import varchar(255) = 'PlanetTogether_Import'
+, @PlanetTogether_Export varchar(255) = 'PlanetTogether_Export'
+, @ErrMess varchar(8000) = '' OUTPUT
+, @ReturnCode int = 0 OUTPUT -- 0 = OK, 1 = WARNING, -1 = ERROR
+, @PublishDate DateTime = null
+, @UserDefinedParameter  varchar(8000) = '' OUTPUT
+, @Message  varchar(8000) = '' OUTPUT
+, @Undo bit = -1 OUTPUT
+	-- Add the parameters for the stored procedure here
+AS
+BEGIN
+
+SELECT 1
+END
+GO
